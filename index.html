@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ME Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="shortcut icon" href="assets/icon.jpg">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Portfolio Me</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Portfolio Me</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/foto1.png" alt="Nurul Izzah profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Nurul Izzah</h1>
+        <p class="section__text__p2">Student</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Resume-Nurul Izzah.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkend1.jpg"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/Nurul Izzah'"
+          />
+      </div>
+    </section>
+    <section id="about">
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/loppy1.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              <h3>Education</h3>
+              <p>Nurul Izzah<br />STMIK YMI Tegal
+                                  Program Studi Sistem Informasi</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Halo! Saya mahasiswa semester 5 Sistem Informasi di STMIK YMI Tegal, dengan minat besar pada teknologi untuk memecahkan masalah nyata. Saya mempelajari topik seperti pengembangan web, komunikasi data, dan pemrograman, serta sering mengeksplorasi alat dan framework baru. Saya berpengalaman mengerjakan proyek seperti Progressive Web Apps dan website interaktif, serta beberapa proyek akademik terkait jaringan dan machine learning. Tujuan saya adalah memperdalam pemahaman TI dan berkontribusi di industri teknologi.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/gmail1.jpg"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:izahnrl7email@gmail.com">izahnrl7@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkend1.jpg"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/Nurul Izzah" target="_blank">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/WhatsApp1.jpg"
+            alt="WhatsApp icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://wa.me/6282138431295">WhatsApp</a></p>          
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/instagram1.jpg"
+            alt="WhatsApp icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.instagram.com/nrulzah" target="_blank">Instagram</a></a></p>          
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <script src="script.js"></script>
+  
+      <!-- Display Notification on page load -->
+      <script>
+          if ('Notification' in window) {
+              Notification.requestPermission().then(permission => {
+                  if (permission === 'granted') {
+                      navigator.serviceWorker.getRegistration().then(reg => {
+                          reg.showNotification("Halo! Selamat Datang di Portofolio Me", {
+                              body: "Terima kasih telah mengunjungi situs saya.",
+                              icon: "assets/icon.jpg"
+                          });
+                      });
+                  }
+              });
+          }
+      </script>
+<!-- Firebase initialization and other scripts -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js";
+
+  const firebaseConfig = {
+      apiKey: "AIzaSyBtpvn07blOacc0ejq224rD1hX05NobtfY",
+      authDomain: "portofolio-608b3.firebaseapp.com",
+      projectId: "portofolio-608b3",
+      storageBucket: "portofolio-608b3.firebasestorage.app",
+      messagingSenderId: "170764643590",
+      appId: "1:170764643590:web:1640fc133c822d7e8b8287",
+      measurementId: "G-VBMNS54FQZ"
+  };
+
+   // Initialize Firebase
+   const app = initializeApp(firebaseConfig);
+            const messaging = getMessaging(app);
+          
+            navigator.serviceWorker.register("/serviceworker.js").then((registration) => {
+              // Dapatkan token jika izin diberikan oleh pengguna        
+                  getToken(messaging, {
+                    serviceWorkerRegistration: registration,
+                    vapidKey: "BHEW3Uxfo-8BjcAR43juFU_e4JG3LSAwFtTfduJqMuu7muCGVlNza4VO8WHdPF6oHST2MMd5mr5myrbsNoMib-M",
+                  }).then((currentToken) => {
+                    if (currentToken) {
+                      console.log("Token is: " + currentToken);
+                      // Kirim token ke server Anda di sini
+                    } else {
+                      console.log("Tidak ada token yang tersedia.");
+                    }
+                  }).catch((err) => {
+                    console.log("Terjadi kesalahan saat mengambil token: ", err);
+                  });
+              });
+  </script>
+  </body>
+</html>
