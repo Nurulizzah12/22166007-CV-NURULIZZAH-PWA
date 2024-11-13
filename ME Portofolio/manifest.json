@@ -1,0 +1,21 @@
+{
+  "name": "Portfolio Me",
+  "short_name": "Portfolio Me",
+  "description": "Halo Selamat Datang di ME Portofolio.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e40f9d",
+  "icons": [
+    {
+      "src": "assets/icon.jpg",
+      "sizes": "192x192",
+      "type": "assets/jpg"
+    },
+    {
+      "src": "assets/icon.jpg",
+      "sizes": "512x512",
+      "type": "assets/jpg"
+    }
+  ]
+}
